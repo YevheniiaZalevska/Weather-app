@@ -1,0 +1,103 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f2f7;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.header h1 {
+    font-size: 3em;
+    background: linear-gradient(to right, #ff7eb3, #ff65a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+.search {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    width: 200px;
+    font-size: 1em;
+}
+
+.search button {
+    padding: 10px 20px;
+    background-color: #ff65a3;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: #ff7eb3;
+}
+
+.weather,
+.pollution {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+}
+
+.weather-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.temp-info {
+    margin: 0 10px;
+}
+
+.weather-img {
+    width: 100px;
+    height: auto;
+}
+
+.pollution-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pollution-mg {
+    width: 50px;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-image: url('./images/footer-background.jpg');
+    background-size: cover;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+footer p {
+    margin: 0;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
