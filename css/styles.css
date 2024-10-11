@@ -12,15 +12,23 @@ body {
 
 .header h1 {
     font-size: 3em;
-    background: linear-gradient(to right, #ff7eb3, #ff65a3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     margin: 0;
-}
-
+    background: linear-gradient( #e58fbd, #844880);
+        -webkit-background-clip: text;
+        /* Обрезка фона по тексту (для Webkit-браузеров) */
+        -webkit-text-fill-color: transparent;
+        /* Прозрачный текст (для Webkit-браузеров) */
+    }
+    
 .search {
     text-align: center;
     margin: 20px 0;
+}
+
+@media screen and (max-width: 405px) {
+    .search input[type="text"] {
+        margin-bottom: 10px;
+    }
 }
 
 .search input[type="text"] {
@@ -46,16 +54,52 @@ body {
     background-color: #ff7eb3;
 }
 
-.weather,
-.pollution {
-    text-align: center;
-    margin: 20px;
+.weather {
+    text-align: left;
+    align-items: center;
+    margin: 20px auto;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
 }
 
-.weather-info {
+.pollution {
+    text-align: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {  
+    .weather {
+        max-width: 300px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .pollution {
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .pollution-name {
+        font-size: medium;
+    }
+}
+
+.pollution-name {
+    font-size: larger;
+    font-weight: 550;
+}
+
+/* .weather-info {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,36 +112,40 @@ body {
 .weather-img {
     width: 100px;
     height: auto;
-}
+} */
 
 .pollution-info {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-.pollution-mg {
+.pollution-img {
     width: 50px;
     height: auto;
 }
 
-footer {
+.pollution p {
+    font-size: small;
+}
+
+.footer {
     text-align: center;
     padding: 20px;
-    background-image: url('./images/footer-background.jpg');
-    background-size: cover;
-    color: white;
+    /* color: rgb(223, 26, 200); */
     position: relative;
     z-index: 1;
 }
 
-footer p {
+.text-footer {
     margin: 0;
+    color: #c483c0;
+    font-size: xx-small;
 }
 
-.error {
+/* .error {
     color: red;
     text-align: center;
     margin-top: 10px;
-}
+} */
