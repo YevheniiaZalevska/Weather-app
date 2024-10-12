@@ -1,66 +1,153 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather app</title>
 
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Gradient -->
 
-    <header>
-        <section class="header">
+    <div class="gradient">
+      <svg
+        viewBox="0 0 100% 100%"
+        xmlns="http://www.w3.org/2000/svg"
+        class="noise"
+      >
+        <filter id="noiseFilter">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.85"
+            numOctaves="6"
+            stitchTiles="stitch"
+          />
+        </filter>
+
+        <rect
+          width="100%"
+          height="100%"
+          preserveAspectRatio="xMidYMid meet"
+          filter="url(#noiseFilter)"
+        />
+      </svg>
+      <!-- Content -->
+
+      <div class="content">
+        <header>
+          <section class="header">
             <h1 class="title">Aplikacja pogodowa</h1>
-        </section>
+          </section>
 
-        <section class="search">
-            <input type="text" name="" id="" placeholder="Podaj nazwe miasta">
+          <section class="search">
+            <input type="text" id="#" placeholder="Podaj nazwe miasta" />
             <button>Sprawdz pogode</button>
             <p class="error"></p>
-        </section>
-    </header>
+          </section>
+        </header>
 
-    <main>
-        <section class="weather">
+        <main>
+          <section class="weather">
             <h2 class="city-mame"></h2>
 
             <div class="weather-info">
-                <div class="temp-info">
-                    <img src="" alt="" class="weather-img">
-                    <p class="temp"></p>
-                </div>
-                <p class="descr"></p>
+              <div class="temp-info">
+                <img class="weather-img" />
+                <p class="temp"></p>
+              </div>
+              <p class="descr"></p>
             </div>
 
             <div>
-                <p>Temperatyra odczuwalna: <span class="temperatura"></span> </p>
-                <p>Cisnienie: <span class="pressure"></span></p>
-                <p>Wilgotnosc: <span class="humidity"></span></p>
-                <p>Przedkocs wiatru: <span class="wind-speed"></span></p>
-                <p>Zachmurzenie: <span class="cloods"></span></p>
-                <p>Widocznosc: <span class="visibility"></span></p>
+              <p>Temperatyra odczuwalna: <span class="temperatura"></span></p>
+              <p>Cisnienie: <span class="pressure"></span></p>
+              <p>Wilgotnosc: <span class="humidity"></span></p>
+              <p>Przedkocs wiatru: <span class="wind-speed"></span></p>
+              <p>Zachmurzenie: <span class="cloods"></span></p>
+              <p>Widocznosc: <span class="visibility"></span></p>
             </div>
+          </section>
 
-        </section>
+          <section class="pollution">
+            <h2 class="pollution-name">Zanieczyszczenie powietrza</h2>
 
-        <section class="pollution">
-            <h2 class="pollution-name">Zanieczyszczenie powietrza</p>
             <div class="pollution-info">
-                <img src="./img/7304531_pm2.5_dust_pollution_smog_dangerous_icon.png" alt="" class="pollution-img">
-                <p class="pollutio-value"></p>
-                <p>&micro;g/m<sup>3</sup></p>
+              <img
+                src="./img/7304531_pm2.5_dust_pollution_smog_dangerous_icon.png"
+                alt="pollution-img"
+                class="pollution-img"
+              />
+              <p class="pollutio-value"></p>
+              <p>&micro;g/m<sup>3</sup></p>
             </div>
-        </section>
-    </main>
+          </section>
+        </main>
 
-    <footer class="footer">
-        <p class="text-footer">Project <span class="wsb">WSB Merito Gdansk 2024</span></p>
-    </footer>
+        <footer class="footer">
+          <p class="text-footer">
+            Project <span class="wsb">WSB Merito Gdansk 2024</span>
+          </p>
+        </footer>
 
-    <scrip src="./js/main.js"></script>
-</body>
+        <!-- Content  -->
+      </div>
+    </div>
+    <div class="gradient-bg">
+      <svg
+        viewBox="0 0 100vw 100vw"
+        xmlns="http://www.w3.org/2000/svg"
+        class="noiseBg"
+      >
+        <filter id="noiseFilterBg">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.6"
+            stitchTiles="stitch"
+          />
+        </filter>
+
+        <rect
+          width="100%"
+          height="100%"
+          preserveAspectRatio="xMidYMid meet"
+          filter="url(#noiseFilterBg)"
+        />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="svgBlur">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="10"
+              result="blur"
+            />
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+              result="goo"
+            />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+      </svg>
+      <div class="gradients-container">
+        <div class="g1"></div>
+        <div class="g2"></div>
+        <div class="g3"></div>
+        <div class="g4"></div>
+        <div class="g5"></div>
+        <div class="interactive"></div>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
 </html>
