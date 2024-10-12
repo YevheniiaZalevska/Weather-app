@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     move();
 });
 
-const button = dcument.querySelector('button');
+const button = dcument.querySelector('button.button');
 const errorMsg = dcument.querySelector('p.error');
 const temp = dcument.querySelector('p.temp');
 const cityName = dcument.querySelector('h2.city-name');

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700'); */
 
 :root {
     --color-bg1: rgb(8, 10, 15);
@@ -28,7 +28,7 @@
 
 html,
 body {
-    font-family: 'Dongle', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -37,7 +37,6 @@ body {
 
 body {
     background: #4f4fe1;
-    font-family: 'Arial', sans-serif;
     overflow: hidden;
 }
 
@@ -266,14 +265,17 @@ body {
 }
 
 .header h1 {
-    font-size: 3em;
+    /* font-size: 3em; */
+    font-weight: 700;
+    font-size: xx-large;
     margin: 0;
-    background: linear-gradient( #2512cd, #a11adf);
-        background-clip: text;
+    /* background: linear-gradient( #2512cd, #a11adf); */
+        /* background-clip: text; */
         /* Обрезка фона по тексту (для Webkit-браузеров) */
-        -webkit-text-fill-color: transparent;
+        /* -webkit-text-fill-color: transparent; */
         /* Прозрачный текст (для Webkit-браузеров) */
-    }
+    color: rgb(255, 255, 255);
+}
     
 .search {
     text-align: center;
@@ -312,12 +314,13 @@ body {
 .weather {
     text-align: left;
     align-items: center;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 10px;
+    /* padding: 15px; */
     /* background-color: #a4a2cf; */
     border-radius: 20px;
     max-width: 500px;
     width: 100%;
+    line-height: 1.5;
 }
 
 .pollution {
@@ -329,6 +332,13 @@ body {
     border-radius: 20px;
     max-width: 500px;
     width: 100%;
+}
+
+@media screen and (max-width: 930px) {
+    .pollution {
+        margin: 10px auto;
+        padding: 10px;
+    }
 }
 
 @media screen and (max-width: 600px) {  
@@ -395,7 +405,7 @@ body {
 
 .text-footer {
     margin: 0;
-    color: #c483c0;
+    color: #6c4be5;
     font-size: xx-small;
 }
 
