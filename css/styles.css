@@ -89,7 +89,6 @@ body {
 
 .weather {
     text-align: left;
-    align-items: center;
     margin: 10px;
     border-radius: 20px;
     width: 100%;
@@ -110,12 +109,12 @@ body {
 
 .weather-info {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     margin-top: 10px;
     margin-bottom: 30px;
-    border-radius: 30px;
-    background-color: rgb(240, 190, 124);
+    /* border-radius: 30px;
+    background-color: rgb(240, 190, 124); */
 }
 
 .temp {
@@ -128,6 +127,7 @@ body {
     margin-right: 10px;
     display: flex;
     justify-content: left;
+    align-items: center;
 }
 
 .weather-img {
@@ -148,8 +148,6 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    /* max-width: 400px; */
-    width: 100%;
 }
 
 .pollution-name {
@@ -185,6 +183,11 @@ body {
     font-size: small;
 }
 
+@media screen and (max-width: 460px) {
+    .pollution {
+        display: block;
+    }
+}
 
 /* footer */
 
