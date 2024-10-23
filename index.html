@@ -47,31 +47,40 @@
           </section>
 
           <section class="search">
-            <input type="text" id="#" placeholder="Podaj nazwe miasta" />
-            <button class="button">Sprawdz pogode</button>
+            <input
+              class="inp"
+              type="text"
+              id="#"
+              placeholder="Podaj nazwe miasta"
+            />
+            <button class="butt">Sprawdz pogode</button>
             <p class="error"></p>
           </section>
         </header>
 
         <main>
           <section class="weather">
-            <h2 class="city-mame"></h2>
+            <h2 class="city-name"></h2>
 
             <div class="weather-info">
               <div class="temp-info">
                 <img class="weather-img" />
                 <p class="temp"></p>
               </div>
-              <p class="descr"></p>
+              <p class="description"></p>
             </div>
 
             <div>
-              <p>Temperatyra odczuwalna: <span class="temperatura"></span></p>
-              <p>Cisnienie: <span class="pressure"></span></p>
-              <p>Wilgotnosc: <span class="humidity"></span></p>
-              <p>Przedkocs wiatru: <span class="wind-speed"></span></p>
-              <p>Zachmurzenie: <span class="cloods"></span></p>
-              <p>Widocznosc: <span class="visibility"></span></p>
+              <p class="items">
+                Temperatyra odczuwalna: <span class="feels-like"></span>
+              </p>
+              <p class="items">Cisnienie: <span class="pressure"></span></p>
+              <p class="items">Wilgotnosc: <span class="humidity"></span></p>
+              <p class="items">
+                Przedkocs wiatru: <span class="wind-speed"></span>
+              </p>
+              <p class="items">Zachmurzenie: <span class="clouds"></span></p>
+              <p class="items">Widocznosc: <span class="visibility"></span></p>
             </div>
           </section>
 
@@ -84,8 +93,8 @@
                 alt="pollution-img"
                 class="pollution-img"
               />
-              <p class="pollutio-value"></p>
-              <p>&micro;g/m<sup>3</sup></p>
+              <p class="pollution-value"></p>
+              <p class="pollution-value2">&micro;g/m<sup>3</sup></p>
             </div>
           </section>
         </main>
@@ -148,6 +157,7 @@
       </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./main.js"></script>
   </body>
 </html>
