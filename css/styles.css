@@ -83,6 +83,8 @@ body {
 
 .city-name {
     color: orangered;
+    display: flex;
+    justify-content: center;
 }
 
 .weather {
@@ -111,7 +113,9 @@ body {
     justify-content: left;
     align-items: center;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    background-color: rgb(240, 190, 124);
 }
 
 .temp {
@@ -133,13 +137,15 @@ body {
 
 .feels-like, .pressure, .humidity, .wind-speed, .clouds, .visibility {
     font-weight: 800;
+    margin-left: 5px;
 }
 
 
 /* pollution */
 
 .pollution {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
     padding: 20px;
     /* max-width: 400px; */
@@ -150,6 +156,11 @@ body {
     font-size: larger;
     font-weight: 300;
     margin-bottom: 5px;
+    margin-right: 7px;
+}
+
+.pollution-value{
+    margin-left: 5px;
 }
 
 .pollution-value2, .pollution-value {
