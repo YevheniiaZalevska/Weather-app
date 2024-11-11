@@ -6,7 +6,26 @@
 body
     font-family: $main-font
     min-height: 100vh
-    @include flex-row
+    @include flex-column
 
 header
     @include box ($third-color, 25px, $second-color, center, 100%)
+
+    .search
+        margin-top: 10px
+
+        div
+            @include flex-column
+
+            *
+                display: block
+                width: 50%
+                height: 25px
+
+            button
+                background-color: $second-color
+                color: $third-color
+                border-radius: 20px
+                border: none
+                margin-top: 3px
+                font-weight: bold
