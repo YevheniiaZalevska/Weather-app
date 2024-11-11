@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box
 }
 
 body {
@@ -10,57 +10,148 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: center
 }
 
 header {
-  background-color: orange;
+  background-color: #f2f2f2;
   padding: 25px;
-  color: blue;
+  color: #48484a;
   text-align: center;
-  width: 100%;
+  width: 100%
 }
 
-.items-info {
+header .search {
+  margin-top: 10px
+}
+
+header .search div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center
+}
+
+header .search div * {
+  display: block;
+  width: 50%;
+  height: 25px
+}
+
+header .search div button {
+  background-color: #48484a;
+  color: #f2f2f2;
+  border-radius: 20px;
+  border: none;
+  margin-top: 3px;
+  font-weight: bold
+}
+
+.weather_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center
+}
+
+.weather_info .temp_info {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  flex-wrap: wrap;
-}
-.items-info p {
-  width: 45%;
+  justify-content: center
 }
 
-.item {
-  flex: 1 1 100%;
+.weather_info .temp_info .temp {
+  font-size: 45px;
+  font-weight: bold
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  .item {
-    flex: 1 1 calc(50% - 16px);
+.all_weather_values {
+  margin-top: 10px
+}
+
+.all_weather_values p {
+  margin-top: 9px
+}
+
+.all_weather_values p span {
+  font-weight: bold
+}
+
+.description_color {
+  background-color: #e96e50;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #f2f2f2
+}
+
+.pollution {
+  margin: 10px 0px
+}
+
+.pollution .pollution_info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start
+}
+
+.pollution .pollution_info * {
+  margin-right: 5px
+}
+
+.pollution .pollution_info img {
+  border-radius: 50%;
+  transition: .5s
+}
+
+@media screen and (min-width: 768px) {
+  .city_name {
+    text-align: center
+  }
+
+  .all_weather_values {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center
+  }
+
+  .all_weather_values p {
+    width: 45%;
+    text-align: center
+  }
+
+  .pollution {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center
   }
 }
-@media (min-width: 1025px) {
-  .item {
-    flex: 1 1 calc(33.33% - 16px);
+
+@media screen and (min-width: 992px) {
+  .all_weather_values p {
+    width: 30%
   }
 }
-@media (min-width: 1920px) {
-  .item {
-    flex: 1 1 calc(33.33% - 16px);
-  }
-}
+
 footer {
-  background-color: blue;
+  background-color: #48484a;
   padding: 20px;
-  color: orange;
+  color: #f2f2f2;
   text-align: center;
-  width: 100%;
+  width: 100%
 }
+
 footer p {
-  font-size: 20px;
+  font-size: 18px
 }
+
 footer p span {
-  font-weight: bold;
-}/*# sourceMappingURL=styles.css.map */
+  color: #e96e50;
+  font-weight: bold
+}
+
+/*# sourceMappingURL=style.css.map */
