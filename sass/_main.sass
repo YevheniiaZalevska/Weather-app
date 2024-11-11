@@ -1,22 +1,61 @@
 
-.items-info
-    @include flex-row
-    flex-wrap: wrap
+.weather_info
+    @include flex-column
+
+    .temp_info
+        @include flex-row
+        justify-content: center
+
+        .temp
+            font-size: 45px
+            font-weight: bold
+
+.all_weather_values
+    margin-top: 10px
 
     p
-        width: 45%
+        margin-top: 9px
 
-.item
-    flex: 1 1 100%
+        span
+            font-weight: bold
 
-@media (min-width: 768px) and (max-width: 1024px)
-    .item
-        flex: 1 1 calc(50% - 16px)
+.description_color
+    background-color: $first-color
+    border-radius: 20px
+    padding: 10px 20px
+    color: $third-color
 
-@media (min-width: 1025px)
-    .item
-        flex: 1 1 calc(33.33% - 16px)
+.pollution
+    margin: 10px 0px
 
-@media (min-width: 1920px)
-    .item
-        flex: 1 1 calc(33.33% - 16px)
+    .pollution_info
+        @include flex-row
+        justify-content: flex-start
+
+        *
+            margin-right: 5px
+
+        img
+            border-radius: 50%
+            transition: 0.5s
+
+@media screen and (min-width: $layout-breakpoint-medium)
+    .city_name
+        text-align: center
+
+    .all_weather_values
+        @include flex-row
+        flex-wrap: wrap
+        justify-content: center
+
+        p
+            width: 45%
+            text-align: center
+
+    .pollution
+        @include flex-column
+
+@media screen and (min-width: $layout-breakpoint-large)
+    .all_weather_values
+        p
+            width: 30%
