@@ -1,137 +1,224 @@
 * {
   margin: 0;
   padding: 0;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
   box-sizing: border-box;
+  /* background: transparent; */
+  border: none;
 }
 
+html,
 body {
   font-family: "Montserrat", sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: antiquewhite;
 }
 
-header {
-  background-color: #ffa58e;
-  padding: 25px;
-  color: #ff4f1e;
+
+/* header */
+
+.header {
   text-align: center;
-  width: 100%;
+  padding: 20px;
 }
-header .search {
+
+.header h1 {
+  /* font-size: 3em; */
+  font-weight: 700;
+  font-size: xx-large;
+  margin: 0;
+  color: orangered;
+}
+
+.search {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.search input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  width: 200px;
+  font-size: 1em;
+}
+
+@media screen and (max-width: 400px) {
+  .search input[type="text"] {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .search input[type="text"] {
+    margin-right: 10px;
+  }
+}
+
+.search button {
+  padding: 10px 20px;
+  background-color: orangered;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.search button:hover {
+  background-color: red;
+}
+
+.error {
+  color: red;
+  text-align: center;
   margin-top: 10px;
 }
-header .search div {
+
+
+/* main */
+
+.main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
   align-items: center;
+  margin-left: 20px;
 }
-header .search div * {
-  display: block;
-  width: 50%;
-  height: 25px;
+
+.city-name {
+  color: orangered;
+  display: flex;
+  justify-content: center;
 }
-header .search div button {
-  background-color: #ff4f1e;
-  color: #4afbd2;
+
+.weather {
+  text-align: left;
+  margin: 10px;
   border-radius: 20px;
-  border: none;
-  margin-top: 3px;
-  font-weight: bold;
+  width: 100%;
+  line-height: 1.5;
+  max-width: 400px;
+}
+
+.description-color {
+  color: #000000;
+  padding: 10px 20px;
+  font-weight: 800;
+  /* border-radius: 30px; */
+}
+
+.items {
+  font-weight: 300;
 }
 
 .weather-info {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-.weather-info .temp-info {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
-}
-.weather-info .temp-info .temp {
-  font-size: 45px;
-  font-weight: bold;
-}
-
-.all-weather-values {
+  align-items: center;
   margin-top: 10px;
-}
-.all-weather-values p {
-  margin-top: 9px;
-}
-.all-weather-values p span {
-  font-weight: bold;
+  margin-bottom: 30px;
+  /* border-radius: 30px;
+    background-color: rgb(240, 190, 124); */
 }
 
-.description-color {
-  background-color: #ffa58e;
-  border-radius: 20px;
-  padding: 10px 20px;
-  color: #4afbd2;
+.temp {
+  font-weight: 800;
 }
+
+.temp-info {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.weather-img {
+  width: 100px;
+  height: auto;
+}
+
+.feels-like,
+.pressure,
+.humidity,
+.wind-speed,
+.clouds,
+.visibility {
+  font-weight: 800;
+  margin-left: 5px;
+}
+
+
+/* pollution */
 
 .pollution {
-  margin: 10px 0px;
-}
-.pollution .pollution-info {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
-}
-.pollution .pollution-info * {
-  margin-right: 5px;
-}
-.pollution .pollution-info img {
-  border-radius: 50%;
-  transition: 0.5s;
+  padding: 20px;
 }
 
-@media screen and (min-width: 768px) {
-  .city-name {
-    text-align: center;
-  }
-  .all-weather-values {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .all-weather-values p {
-    width: 45%;
-    text-align: center;
-  }
+.pollution-name {
+  font-size: larger;
+  font-weight: 300;
+  margin-bottom: 5px;
+  margin-right: 7px;
+}
+
+.pollution-value {
+  margin-left: 5px;
+}
+
+.pollution-value2,
+.pollution-value {
+  font-weight: 800;
+}
+
+.pollution-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.pollution-img {
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
+  transition: 5ms;
+}
+
+.pollution p {
+  font-size: small;
+}
+
+@media screen and (max-width: 460px) {
   .pollution {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    display: block;
   }
 }
-@media screen and (min-width: 992px) {
-  .all-weather-values p {
-    width: 30%;
-  }
-}
-footer {
-  background-color: #ffa58e;
-  padding: 20px;
-  color: white;
+
+/* footer */
+
+.footer {
   text-align: center;
-  width: 100%;
+  margin-bottom: 5px;
 }
-footer p {
-  font-size: 10px;
+
+.text-footer {
+  margin: 0;
+  color: orangered;
+  font-size: xx-small;
 }
-footer p span {
-  color: #ff4f1e;
-  font-weight: bold;
-}/*# sourceMappingURL=styles.css.map */
+
+
+
